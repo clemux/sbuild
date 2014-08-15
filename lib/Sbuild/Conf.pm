@@ -146,6 +146,12 @@ sub setup ($) {
 	    DEFAULT => 1,
 	    HELP => 'Build architecture: any packages by default'
 	},
+        'NO_BUILD_OPTION'                  => {
+            TYPE => 'BOOL',
+            VARNAME => 'no_build_option',
+            DEFAULT => 0,
+            HELP => 'Do not pass -b/-B to dpkg-buildpackage'
+        },
 	'NOLOG'					=> {
 	    TYPE => 'BOOL',
 	    GROUP => '__INTERNAL',

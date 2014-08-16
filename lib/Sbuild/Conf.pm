@@ -139,6 +139,13 @@ sub setup ($) {
 	    DEFAULT => 0,
 	    HELP => 'Build architecture: all packages by default'
 	},
+        'BUILD_ONLY_ARCH_ALL'                   => {
+            TYPE => 'BOOL',
+            VARNAME => 'build_only_arch_all',
+            GROUP => 'Build options',
+            DEFAULT => 0,
+            HELP => 'Build architecture: only all packages'
+        },
 	'BUILD_ARCH_ANY'			=> {
 	    TYPE => 'BOOL',
 	    VARNAME => 'build_arch_any',

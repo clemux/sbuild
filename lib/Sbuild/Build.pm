@@ -1388,7 +1388,9 @@ sub build {
 
     my $binopt = $self->get_conf('BUILD_SOURCE') ?
 	$self->get_conf('FORCE_ORIG_SOURCE') ? "-sa" : "" :
-	$self->get_conf('BUILD_ARCH_ALL') ?	"-b" : "-B";
+	$self->get_conf('BUILD_ARCH_ALL') ?	
+            $self->get_conf('BUILD_ONLY_ARCH_ALL') ? '-A' : "-b"
+            : '-B';
 
     my $bdir = $self->get('Session')->strip_chroot_path($dscdir);
     if (-f "$self->{'Chroot Dir'}/etc/ld.so.conf" &&

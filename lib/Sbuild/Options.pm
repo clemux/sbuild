@@ -55,6 +55,9 @@ sub set_options {
 		       "no-arch-all" => sub {
 			   $self->set_conf('BUILD_ARCH_ALL', 0);
 		       },
+                       "only-arch-all" => sub {
+                           $self->set_conf('BUILD_ONLY_ARCH_ALL', 1);
+                       },
 		       "add-depends=s" => sub {
 			   push(@{$self->get_conf('MANUAL_DEPENDS')}, $_[1]);
 		       },
